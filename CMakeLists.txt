@@ -101,6 +101,35 @@ add_subdirectory(cyber/python)
 #build tools 
 add_subdirectory(cyber/tools)
 
+
+# proto path
+# include_directories(${PROJECT_SOURCE_DIR}/models/common/proto)
+# include_directories(${PROJECT_SOURCE_DIR}/modules/proto)
+# include_directories(${PROJECT_SOURCE_DIR}/modules/common/proto)
+
+# ADD_CUSTOM_COMMAND(
+# 	OUTPUT "${proto_file_name}.pb.h" "${proto_file_name}.pb.cc"
+# 	COMMAND protoc --proto_path=${PROJECT_SOURCE_DIR}
+# 		--cpp_out=${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/models/common/proto/*.proto
+# )
+
+# ADD_CUSTOM_COMMAND(
+# 	OUTPUT "${proto_file_name}.pb.h" "${proto_file_name}.pb.cc"
+# 	COMMAND protoc --proto_path=${PROJECT_SOURCE_DIR}
+# 		--cpp_out=${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/models/proto/*.proto
+# )
+# ADD_CUSTOM_COMMAND(
+# 	OUTPUT "${proto_file_name}.pb.h" "${proto_file_name}.pb.cc"
+# 	COMMAND protoc --proto_path=${PROJECT_SOURCE_DIR}
+# 		--cpp_out=${PROJECT_SOURCE_DIR} ${PROJECT_SOURCE_DIR}/models/proto/*.proto
+# )
+
+
+# add_subdirectory(modules)
+add_subdirectory(modules/common)
+# add_subdirectory(modules/map)
+# add_subdirectory(modules/perception)
+
 #build tests
 # FOREACH(TEST_FILE ${CYBER_TEST_SRCS})  
 # 	string( REGEX MATCH "[A-Za-z0-9_]*[.]cc" FILE_NAME ${TEST_FILE} ) 

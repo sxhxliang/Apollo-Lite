@@ -23,3 +23,19 @@ link_directories(${PROTOBUF_LIBRARIES})
 
 find_package(Poco REQUIRED COMPONENTS Foundation CONFIG)
 message(STATUS "Found Poco: ${Poco_LIBRARIES}")
+
+# for modules
+
+include_directories(/usr/local/cuda/include)
+
+# Try to find Boost
+find_package(Boost COMPONENTS program_options REQUIRED)
+if(Boost_FOUND)
+    include_directories(${Boost_INCLUDE_DIRS})
+else ()
+    message(FATAL_ERROR "Could not locate Boost")
+endif()
+
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS})
+
