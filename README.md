@@ -1,4 +1,4 @@
-# cyber_rt_standalone_r6.0.0
+# Apollo Lite With Camera Only
 1, Based on Cyber-RT framework from apollo
 
 2. copy apollo cyber
